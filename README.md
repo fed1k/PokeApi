@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# (project-name)
+# project-name
 
 > In this project I build a mobile and desktop version of a website, using what I learned in HTML and CSS.
 
@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-For a live demo of the Portfolio [click here](https://jsug9.github.io/(project-name)/).
+For a live demo of the Portfolio [click here](https://jsug9.github.io/project-name/).
 
 ## Getting Started
 
@@ -20,10 +20,10 @@ To get a local copy of the project, follow these steps:
 1. Open the terminal and navigate to the folder where you would like to put these files.
 2. Type the following commands into the terminal: 
  ```
- git clone https://github.com/jsug9/(project-name)
+ git clone https://github.com/jsug9/project-name
  ```
  ```
- cd (project-name)
+ cd project-name
  ```
 
 ## Author
@@ -37,7 +37,7 @@ To get a local copy of the project, follow these steps:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/jsug9/(project-name)/issues).
+Feel free to check the [issues page](https://github.com/jsug9/project-name/issues).
 ## Show your support
 
 Give a ⭐️ if you like this project!
