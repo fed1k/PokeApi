@@ -33,7 +33,8 @@
     "build": "webpack",
     "start": "webpack serve --open",
     "deploy": "gh-pages -d dist",
-    "linters": "npx eslint . && npx stylelint **/*.{css,scss} && npx hint ."
+    "linters": "npx eslint . && npx stylelint **/*.{css,scss} && npx hint .",
+    "fixlinters": "npx eslint ./src --fix && npx stylelint **/*.{css,scss} --fix"
   },
   "repository": {
     "type": "git",
