@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-For a live demo of the Portfolio [click here](https://jsug9.github.io/KanbanBoard/).
+For a live demo of the Portfolio [click here](https://fed1k.github.io/KanbanBoard/).
 
 ## Getting Started
 
@@ -20,7 +20,7 @@ To get a local copy of the project, follow these steps:
 1. Open the terminal and navigate to the folder where you would like to put these files.
 2. Type the following commands into the terminal: 
  ```
- git clone https://github.com/jsug9/KanbanBoard
+ git clone https://github.com/fed1k/KanbanBoard
  ```
  ```
  cd KanbanBoard
@@ -47,7 +47,7 @@ To get a local copy of the project, follow these steps:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/jsug9/KanbanBoard/issues).
+Feel free to check the [issues page](https://github.com/fed1k/KanbanBoard/issues).
 ## Show your support
 
 Give a ⭐️ if you like this project!

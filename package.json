@@ -38,13 +38,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jsug9/KanbanBoard.git"
+    "url": "git+https://github.com/fed1k/KanbanBoard.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jsug9/KanbanBoard/issues"
+    "url": "https://github.com/fed1k/KanbanBoard/issues"
   },
-  "homepage": "https://github.com/jsug9/KanbanBoard#readme"
+  "homepage": "https://github.com/fed1k/KanbanBoard#readme"
 }
