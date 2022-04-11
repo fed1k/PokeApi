@@ -10,8 +10,8 @@ for (let i = 0; i < arrayOfCards.length; i += 1) {
     <img src="${arrayOfCards[i].imgSrc}"></img>
     <p>${arrayOfCards[i].title}<i class="far fa-heart"></i></i></p>
     <p class="likeCounts">likes${arrayOfCards[i].likeCount}</p>
-    <button type="button" class="home-button comment-buttons" id="comment-button">Comments</button>
-    <button type="button" class="home-button reservation-buttons" id="reservation-button">Reservations</button>
+    <button type="button" class="home-button comment-buttons">Comments</button>
+    <button type="button" class="home-button reservation-buttons">Reservations</button>
   `;
   main.appendChild(card);
 }
