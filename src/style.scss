@@ -1,0 +1,25 @@
+.nav-list-container {
+    display: flex;
+    justify-content: center;
+    .nav-list {
+        list-style: none;
+        padding: 5px 20px;
+        font-size: 18px;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 20% 20% 20%;
+    grid-gap: 6%;
+    justify-content: center;
+}
+
+i {
+    float: right;
+}
