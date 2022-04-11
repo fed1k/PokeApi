@@ -2,7 +2,7 @@
 
 # KanbanBoard
 
-> In this project I build a mobile and desktop version of a website, using what I learned in HTML and CSS.
+> In this project, we practice everything we have learned in Webpack and APIs.
 
 ## Built With
 
@@ -26,7 +26,7 @@ To get a local copy of the project, follow these steps:
  cd KanbanBoard
  ```
 
-## Author
+## Authors
 
 👤 **Augusto Galindo**
 
@@ -55,7 +55,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Thanks to my peers who are always there to offer support. 
+- Thanks to our peers who are always there to offer support. 
 
 ## 📝 License
 
