@@ -1,5 +1,5 @@
 {
-  "name": "project-name",
+  "name": "kanbanboard",
   "version": "1.0.0",
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "main": "webpack.config.js",
@@ -38,13 +38,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jsug9/project-name.git"
+    "url": "git+https://github.com/jsug9/KanbanBoard.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jsug9/project-name/issues"
+    "url": "https://github.com/jsug9/KanbanBoard/issues"
   },
-  "homepage": "https://github.com/jsug9/project-name#readme"
+  "homepage": "https://github.com/jsug9/KanbanBoard#readme"
 }

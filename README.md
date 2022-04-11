@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# project-name
+# KanbanBoard
 
 > In this project I build a mobile and desktop version of a website, using what I learned in HTML and CSS.
 
@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-For a live demo of the Portfolio [click here](https://jsug9.github.io/project-name/).
+For a live demo of the Portfolio [click here](https://jsug9.github.io/KanbanBoard/).
 
 ## Getting Started
 
@@ -20,10 +20,10 @@ To get a local copy of the project, follow these steps:
 1. Open the terminal and navigate to the folder where you would like to put these files.
 2. Type the following commands into the terminal: 
  ```
- git clone https://github.com/jsug9/project-name
+ git clone https://github.com/jsug9/KanbanBoard
  ```
  ```
- cd project-name
+ cd KanbanBoard
  ```
 
 ## Author
@@ -33,11 +33,21 @@ To get a local copy of the project, follow these steps:
 - GitHub: [@jsug9](https://github.com/jsug9)
 - LinkedIn: [Augusto Galindo](https://www.linkedin.com/in/augustogalindo/)
 
+👤 **Firdavs Allamurotov**
+
+- GitHub: [@fed1k](https://github.com/fed1k)
+- LinkedIn: [Firdavs Allamurotov](https://www.linkedin.com/in//)
+
+👤 **J. Luis Arredondo**
+
+- GitHub: [@Retky](https://github.com/Retky)
+- LinkedIn: [J. Luis Arredondo](https://www.linkedin.com/in//)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/jsug9/project-name/issues).
+Feel free to check the [issues page](https://github.com/jsug9/KanbanBoard/issues).
 ## Show your support
 
 Give a ⭐️ if you like this project!

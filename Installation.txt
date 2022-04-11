@@ -1,5 +1,5 @@
 Setup
-Replace "project-name" for your project's name, you can do that by pressing the search button on the left navbar.
+Replace "KanbanBoard" for your project's name, you can do that by pressing the search button on the left navbar.
 
 Webpack
 npm install webpack webpack-cli --save-dev
