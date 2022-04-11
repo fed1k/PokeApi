@@ -80,3 +80,31 @@ body {
   font-weight: bold;
   background: none;
 }
+
+.close {
+  position: relative;
+  margin-left: auto;
+}
+
+.gg-close {
+    margin-left: auto;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+.gg-close::after,
+.gg-close::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: currentColor;
+    transform: rotate(45deg);
+    border-radius: 5px;
+    top: 13px;
+}
+.gg-close::after {
+    transform: rotate(-45deg)
+}
