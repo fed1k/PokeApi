@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+}
+
+.blur {
+  background: rgba(170, 180, 170, 0.4);
+  backdrop-filter: blur(1px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popUp {
+  border: solid #000 1px;
+  background: #fff;
+  width: 500px;
+  height: 600px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rsvDiv {
+  flex: 1;
+}
+
+.rsvImg {
+  width: 50%;
+}
+
+.rsvImg img {
+  width: 100%;
+}
