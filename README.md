@@ -40,8 +40,9 @@ To get a local copy of the project, follow these steps:
 
 👤 **J. Luis Arredondo**
 
-- GitHub: [@Retky](https://github.com/Retky)
-- LinkedIn: [J. Luis Arredondo](https://www.linkedin.com/in//)
+- GitHub: [@Retky](https://github.com/Retky "J. Luis Arredondo GitHub")
+- Twitter: [@RetkyFox](https://twitter.com/retkyFox "J. Luis Arredondo Twitter")
+- LinkedIn: [Retky](https://www.linkedin.com/in/Retky "J. Luis Arredondo LinkedIn")
 
 ## 🤝 Contributing
 
