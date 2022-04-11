@@ -7,11 +7,12 @@
 .nav-list-container {
     display: flex;
     justify-content: center;
-    .nav-list {
-        list-style: none;
-        padding: 5px 20px;
-        font-size: 18px;
-    }
+}
+
+.nav-list {
+    list-style: none;
+    padding: 5px 20px;
+    font-size: 18px;
 }
 
 nav {
@@ -63,4 +64,14 @@ footer {
     padding: 25px 20px;
     border-top: 3px solid black;
     margin-top: 30px;
+}
+
+@media (max-width: 760px) {
+    .main {
+        grid-template-columns: 40% 40%;
+    }
+
+    .nav-list {
+        padding: 5px 15px;
+    }
 }
