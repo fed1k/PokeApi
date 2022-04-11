@@ -31,10 +31,6 @@ body {
   }
 }
 
-.rsvDiv {
-  flex: 1;
-}
-
 .pokeImg {
   width: 40%;
   img {
@@ -65,12 +61,13 @@ body {
 }
 
 .reserve {
+  width: 75%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   input {
     padding: 5px;
     margin-bottom: 8px;
+    margin-right: auto;
   }
 }
 
