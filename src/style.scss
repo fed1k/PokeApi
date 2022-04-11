@@ -38,6 +38,10 @@ i {
     color: #fe0000;
 }
 
+.likeCounts {
+    align-self: flex-end;
+}
+
 i:hover {
     cursor: pointer;
 }
@@ -53,4 +57,10 @@ i:hover {
     cursor: pointer;
     color: white;
     background-color: #1e1e1e;
+}
+
+footer {
+    padding: 25px 20px;
+    border-top: 3px solid black;
+    margin-top: 30px;
 }
