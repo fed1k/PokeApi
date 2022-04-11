@@ -7,12 +7,18 @@
 ## Built With
 
 - HTML
-- CSS
+- SASS
 - JavaScript
+- Webpack
 
 ## Live Demo
 
 For a live demo of the Portfolio [click here](https://fed1k.github.io/KanbanBoard/).
+
+## Prerequisites
+
+If you haven't yet, you should first [set up Git.](https://docs.github.com/en/get-started/quickstart/set-up-git) Don't forget to [set up authentication to GitHub.com from Git](https://docs.github.com/en/get-started/quickstart/set-up-git#next-steps-authenticating-with-github-from-git) as well.
+
 
 ## Getting Started
 
@@ -25,6 +31,31 @@ To get a local copy of the project, follow these steps:
  ```
  cd KanbanBoard
  ```
+3. Install webpack
+  - Required to run 
+  ```
+  npm init -y
+  ```
+  - Webpack
+  ```
+  npm install webpack webpack-cli --save-dev
+  ```
+  - HTML plugin
+  ```
+  npm install --save-dev html-webpack-plugin
+  ```
+  - CSS plugin
+  ```
+  npm install --save-dev style-loader css-loader
+  ```
+  - Live Server
+  ```
+  npm install --save-dev webpack-dev-server
+  ```
+For the Live Server  || http://localhost:8080/
+```
+npm start
+```
 
 ## Authors
 
