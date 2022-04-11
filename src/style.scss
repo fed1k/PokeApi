@@ -19,8 +19,8 @@ body {
 .popBox {
   border: solid #000 1px;
   background: #fff;
-  width: 500px;
-  height: 750px;
+  width: 400px;
+  min-height: 650px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@ body {
 }
 
 .pokeImg {
-  width: 50%;
+  width: 40%;
   img {
     width: 100%;
   }
