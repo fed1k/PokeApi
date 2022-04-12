@@ -23,3 +23,29 @@ like.forEach((element) => {
     element.classList.toggle('fas');
   });
 });
+
+const hamburgerBtn = document.querySelector('.hamburger-menu');
+
+const ul = document.createElement('div');
+ul.innerHTML = `
+  <ul id="sidebarList-items">
+    <li>Spaceships</li>
+    <li class="unvisible">Planets</li>
+    <li class="unvisible">Races</li>
+  </ul>
+  <div class="empty"></div>
+`;
+ul.className = 'sidebar';
+const nav = document.querySelector('nav');
+nav.appendChild(ul);
+
+const firstMenuBtn = document.querySelector('.menu-btn');
+hamburgerBtn.addEventListener('click', () => {
+  ul.classList.add('sidebar-active');
+});
+
+const empty = document.querySelector('.empty');
+empty.addEventListener('click', () => {
+  ul.classList.remove('sidebar-active');
+  firstMenuBtn.style.display = 'block';
+});
