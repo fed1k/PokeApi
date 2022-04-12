@@ -1,21 +1,20 @@
-import getPokeDesc from './descript.js'
+import getPokeDesc from './descript.js';
 
 const loadPopup = (pokeId) => {
-  const info = getPokeDesc(pokeId)
-  .then((poke) => {
-    console.log(poke);
-    const loadCont = document.querySelector('.pokeLoad');
-    loadCont.innerHTML = '';
+  getPokeDesc(pokeId)
+    .then((poke) => {
+      const loadCont = document.querySelector('.pokeLoad');
+      loadCont.innerHTML = '';
 
-    // Image
-    const pokeImage = document.createElement('div');
-    pokeImage.classList = 'rsvDiv pokeImg';
-    pokeImage.innerHTML = `<img src=${poke.image} alt="pikachu">`;
+      // Image
+      const pokeImage = document.createElement('div');
+      pokeImage.classList = 'rsvDiv pokeImg';
+      pokeImage.innerHTML = `<img src=${poke.image} alt="pikachu">`;
 
-    // Descript
-    const pokeInfo = document.createElement('div');
-    pokeInfo.classList = 'rsvDiv info';
-    pokeInfo.innerHTML = `<h2 class="pokeName">${poke.name}</h2>
+      // Descript
+      const pokeInfo = document.createElement('div');
+      pokeInfo.classList = 'rsvDiv info';
+      pokeInfo.innerHTML = `<h2 class="pokeName">${poke.name}</h2>
     <ul class="description">
       <li class="descEl"><span class="attName">Type</span><span class="attValue">${poke.type}</span></li>
       <li class="descEl"><span class="attName">Abilities</span><span class="attValue">${poke.abilities}</span></li>
@@ -23,7 +22,7 @@ const loadPopup = (pokeId) => {
       <li class="descEl"><span class="attName">Weight</span><span class="attValue">${poke.weight}</span></li>
     </ul>`;
 
-    // Reservations
+      // Reservations
       const pokeReserv = document.createElement('div');
       pokeReserv.classList = 'rsvDiv reservation';
       pokeReserv.innerHTML = `<h3>Reservations <span class="rsvCount">(2)</span></h3>
@@ -35,7 +34,7 @@ const loadPopup = (pokeId) => {
       loadCont.appendChild(pokeImage);
       loadCont.appendChild(pokeInfo);
       loadCont.appendChild(pokeReserv);
-  })
-}
+    });
+};
 
 export default loadPopup;

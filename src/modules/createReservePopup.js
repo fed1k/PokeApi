@@ -1,4 +1,3 @@
-import pokeDesc from './descript.js';
 import rsvSubmit from './rsvFormVal.js';
 
 const body = document.querySelector('#body');
@@ -26,7 +25,7 @@ const createRsvPopup = () => {
   // Image
   const pokeImage = document.createElement('div');
   pokeImage.classList = 'rsvDiv pokeImg';
-  pokeImage.innerHTML = `<img src="https://imagenpng.com/wp-content/uploads/2016/09/Pikachu-png-1-635x6241.png" alt="pikachu">`;
+  pokeImage.innerHTML = '<img src="https://imagenpng.com/wp-content/uploads/2016/09/Pikachu-png-1-635x6241.png" alt="pikachu">';
 
   // Descript
   const pokeInfo = document.createElement('div');
@@ -40,9 +39,9 @@ const createRsvPopup = () => {
   </ul>`;
 
   // Reservations
-    const pokeReserv = document.createElement('div');
-    pokeReserv.classList = 'rsvDiv reservation';
-    pokeReserv.innerHTML = `<h3>Reservations <span class="rsvCount">(2)</span></h3>
+  const pokeReserv = document.createElement('div');
+  pokeReserv.classList = 'rsvDiv reservation';
+  pokeReserv.innerHTML = `<h3>Reservations <span class="rsvCount">(2)</span></h3>
     <ul class="rsvList">
       <li>03/11/2021 - 03/12/2021 by Alex</li>
       <li>03/14/2021 - 03/16/2021 by Mia</li>
