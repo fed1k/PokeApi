@@ -1,4 +1,5 @@
 import pokeDesc from './descript.js';
+import rsvSubmit from './rsvFormVal.js';
 
 const body = document.querySelector('#body');
 
@@ -28,16 +29,20 @@ const createRsvPopup = () => {
         <li>03/14/2021 - 03/16/2021 by Mia</li> <!-- PART TO REPLACE -->
       </ul>
     </div>
-    <form class="rsvDiv reserve" action="index.html" method="post">
-      <h3>Add a Reservation</h3>
-      <input type="text" name="name" value="" required placeholder="Your Name">
-      <input type="text" name="dateStart" value="" placeholder="Start date (mm/dd/yyyy)">
-      <input type="text" name="dateEnd" value="" placeholder="End date (mm/dd/yyyy)">
-      <input class="rsvBtn" type="submit" name="reservate" value="Reserve">
-    </form>
   </section>`;
 
+  const rsvForm = document.createElement('form');
+  rsvForm.classList = "rsvDiv reserve";
+  rsvForm.innerHTML = `<h3>Add a Reservation</h3>
+  <input type="text" name="name" value="" required placeholder="Your Name">
+  <input type="text" name="dateStart" value="" placeholder="Start date (mm/dd/yyyy)">
+  <input type="text" name="dateEnd" value="" placeholder="End date (mm/dd/yyyy)">
+  <input class="rsvBtn" type="submit" name="reservate" value="Reserve">`;
+
+  popUp.querySelector('section').appendChild(rsvForm);
   body.appendChild(popUp);
+
+  rsvSubmit(rsvForm);
 };
 
 export default createRsvPopup;
