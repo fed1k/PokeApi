@@ -1,5 +1,6 @@
 import getPoke from './pokeApi.js';
 
+// This function filter the Api information
 const getPokeDesc = async (pokeId) => {
   const poke = await getPoke(pokeId)
   const pokemon = await {

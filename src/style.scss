@@ -36,6 +36,12 @@ body {
   }
 }
 
+.pokeLoad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .pokeImg {
   width: 40%;
 

@@ -19,6 +19,10 @@ const createRsvPopup = () => {
     popUp.classList = 'popUp';
   });
 
+  // Load Container
+  const loadCont = document.createElement('div');
+  loadCont.classList = 'pokeLoad';
+
   // Image
   const pokeImage = document.createElement('div');
   pokeImage.classList = 'rsvDiv pokeImg';
@@ -54,10 +58,11 @@ const createRsvPopup = () => {
   <input class="rsvBtn" type="submit" name="reservate" value="Reserve">`;
 
   // Apendding elements
-  popUp.querySelector('section').appendChild(pokeImage);
-  popUp.querySelector('section').appendChild(pokeInfo);
-  popUp.querySelector('section').appendChild(pokeReserv);
+  popUp.querySelector('section').appendChild(loadCont);
   popUp.querySelector('section').appendChild(rsvForm);
+  loadCont.appendChild(pokeImage);
+  loadCont.appendChild(pokeInfo);
+  loadCont.appendChild(pokeReserv);
   body.appendChild(popUp);
 
   // Form validation listener
