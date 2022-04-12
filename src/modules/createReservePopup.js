@@ -6,7 +6,7 @@ const body = document.querySelector('#body');
 const createRsvPopup = () => {
   const popUp = document.createElement('div');
 
-  popUp.classList.add('popUp');
+  popUp.classList = 'popUp';
   popUp.innerHTML = `<section class="popBox">
     <div class="close">
       <i class="gg-close"></i>
@@ -31,17 +31,26 @@ const createRsvPopup = () => {
     </div>
   </section>`;
 
+  // Hide card
+  const close = popUp.querySelector('.close');
+  close.addEventListener('click', () => {
+    popUp.classList = 'popUp';
+  });
+
+  // Form
   const rsvForm = document.createElement('form');
-  rsvForm.classList = "rsvDiv reserve";
+  rsvForm.classList = 'rsvDiv reserve';
   rsvForm.innerHTML = `<h3>Add a Reservation</h3>
   <input type="text" name="name" value="" required placeholder="Your Name">
   <input type="text" name="dateStart" value="" placeholder="Start date (mm/dd/yyyy)">
   <input type="text" name="dateEnd" value="" placeholder="End date (mm/dd/yyyy)">
   <input class="rsvBtn" type="submit" name="reservate" value="Reserve">`;
 
+  // Apendding elements
   popUp.querySelector('section').appendChild(rsvForm);
   body.appendChild(popUp);
 
+  // Form validation listener
   rsvSubmit(rsvForm);
 };
 
