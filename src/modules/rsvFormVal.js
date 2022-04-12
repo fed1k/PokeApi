@@ -1,5 +1,5 @@
 const dateError = () => {
- console.log('Invalid date format or invalid day');
+  console.log('Invalid date format or invalid day');
 };
 
 const checkDate = (dateIn) => {
@@ -8,17 +8,25 @@ const checkDate = (dateIn) => {
     dateError();
   } else {
     const date = dateIn.split('/');
-    const today = [new Date().getMonth()+1, new Date().getDate(), new Date().getFullYear()];
+    const today = [new Date().getMonth() + 1, new Date().getDate(), new Date().getFullYear()];
     if (Number(date[2]) < today[2]) {
       dateError();
-    } else if (Number(date[2]) === today[2] && Number(date[0]) < today[0] || Number(date[0]) > 12) {
+    } else if (
+      Number(date[2]) === today[2]
+      && (Number(date[0]) < today[0] || Number(date[0]) > 12)) {
       dateError();
-    } else if (Number(date[2]) === today[2] && Number(date[0]) === today[0] && Number(date[1]) < today[1] || Number(date[1]) > 31 ) {
+    } else if (
+      Number(date[2]) === today[2]
+      && Number(date[0]) === today[0]
+      && (Number(date[1]) < today[1] || Number(date[1]) > 31)) {
+      dateError();
+    } else if (Number(date[0]) > 12 || Number(date[1]) > 31) {
       dateError();
     } else {
       return true;
     }
   }
+  return false;
 };
 
 const rsvSubmit = (element) => {
