@@ -11,24 +11,6 @@ const createRsvPopup = () => {
     <div class="close">
       <i class="gg-close"></i>
     </div>
-    <div class="rsvDiv pokeImg"> <img src="https://imagenpng.com/wp-content/uploads/2016/09/Pikachu-png-1-635x6241.png" alt="x"> </div>
-    <div class="rsvDiv info">
-      <h2 class="pokeName">${pokeDesc[0].name}</h2>
-      <ul class="description">
-        <li class="descEl"><span class="attName">Type</span><span class="attValue">${pokeDesc[0].type}</span></li>
-        <li class="descEl"><span class="attName">Category</span><span class="attValue">${pokeDesc[0].category}</span></li>
-        <li class="descEl"><span class="attName">Abilities</span><span class="attValue">${pokeDesc[0].abilities}</span></li>
-        <li class="descEl"><span class="attName">Height</span><span class="attValue">${pokeDesc[0].height}</span></li>
-        <li class="descEl"><span class="attName">Weight</span><span class="attValue">${pokeDesc[0].weight}</span></li>
-      </ul>
-    </div>
-    <div class="rsvDiv reservation">
-      <h3>Reservations <span class="rsvCount">(2)</span></h3>
-      <ul class="rsvList">
-        <li>03/11/2021 - 03/12/2021 by Alex</li> <!-- PART TO REPLACE -->
-        <li>03/14/2021 - 03/16/2021 by Mia</li> <!-- PART TO REPLACE -->
-      </ul>
-    </div>
   </section>`;
 
   // Hide card
@@ -36,6 +18,31 @@ const createRsvPopup = () => {
   close.addEventListener('click', () => {
     popUp.classList = 'popUp';
   });
+
+  // Image
+  const pokeImage = document.createElement('div');
+  pokeImage.classList = 'rsvDiv pokeImg';
+  pokeImage.innerHTML = `<img src="https://imagenpng.com/wp-content/uploads/2016/09/Pikachu-png-1-635x6241.png" alt="pikachu">`;
+
+  // Descript
+  const pokeInfo = document.createElement('div');
+  pokeInfo.classList = 'rsvDiv info';
+  pokeInfo.innerHTML = `<h2 class="pokeName">name</h2>
+  <ul class="description">
+    <li class="descEl"><span class="attName">Type</span><span class="attValue">type</span></li>
+    <li class="descEl"><span class="attName">Abilities</span><span class="attValue">abilities</span></li>
+    <li class="descEl"><span class="attName">Height</span><span class="attValue">height</span></li>
+    <li class="descEl"><span class="attName">Weight</span><span class="attValue">weight</span></li>
+  </ul>`;
+
+  // Reservations
+    const pokeReserv = document.createElement('div');
+    pokeReserv.classList = 'rsvDiv reservation';
+    pokeReserv.innerHTML = `<h3>Reservations <span class="rsvCount">(2)</span></h3>
+    <ul class="rsvList">
+      <li>03/11/2021 - 03/12/2021 by Alex</li>
+      <li>03/14/2021 - 03/16/2021 by Mia</li>
+    </ul>`;
 
   // Form
   const rsvForm = document.createElement('form');
@@ -47,6 +54,9 @@ const createRsvPopup = () => {
   <input class="rsvBtn" type="submit" name="reservate" value="Reserve">`;
 
   // Apendding elements
+  popUp.querySelector('section').appendChild(pokeImage);
+  popUp.querySelector('section').appendChild(pokeInfo);
+  popUp.querySelector('section').appendChild(pokeReserv);
   popUp.querySelector('section').appendChild(rsvForm);
   body.appendChild(popUp);
 
