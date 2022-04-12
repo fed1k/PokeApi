@@ -1,21 +1,40 @@
 import './style.scss';
-import arrayOfCards from './data.js';
-import movieImage from './movieImage.png';
+// import arrayOfCards from './data.js';
+// import movieImage from './movieImage.png';
+// import { get } from 'lodash';
 
-const main = document.querySelector('.main');
+// const array = [];
+// const getImage = async (link) => {
 
-for (let i = 0; i < arrayOfCards.length; i += 1) {
-  const card = document.createElement('div');
-  card.className = 'card';
-  card.innerHTML = `
-    <img src="${movieImage}"></img>
-    <p>${arrayOfCards[i].title}<i class="far fa-heart"></i></p>
-    <p class="likeCounts">likes ${arrayOfCards[i].likeCount}</p>
-    <button type="button" class="home-button comment-buttons">Comments</button>
-    <button type="button" class="home-button reservation-buttons">Reservations</button>
+//   array.push(json.sprites.front_default);
+// };
+
+// array.forEach((element) => {
+//   console.log(element);
+// });
+const getData = async () => {
+  const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
+  const json = await response.json();
+  const main = document.querySelector('.main');
+  for (let i = 0; i < 18; i += 1) {
+    const getImage = async () => {
+      const response1 = await fetch(json.results[i].url);
+      const json2 = await response1.json();
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+      <img src="${json2.sprites.front_default}"></img>
+      <p>${json.results[i].name}<i class="far fa-heart"></i></p>
+      <p class="likeCounts">likes ${5}</p>
+      <button type="button" class="home-button comment-buttons">Comments</button>
+      <button type="button" class="home-button reservation-buttons">Reservations</button>
   `;
-  main.appendChild(card);
-}
+      main.appendChild(card);
+    };
+    getImage();
+  }
+};
+getData();
 
 const like = document.querySelectorAll('.far');
 like.forEach((element) => {
@@ -49,3 +68,5 @@ empty.addEventListener('click', () => {
   ul.classList.remove('sidebar-active');
   firstMenuBtn.style.display = 'block';
 });
+
+// console.log(arrayOfCards);
