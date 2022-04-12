@@ -1,7 +1,7 @@
 const pokeDesc = [
   {
     name: 'Pikachu',
-    type: 'ELectric',
+    type: 'Electric',
     category: 'Mouse',
     abilities: 'Static',
     height: '1\'04"',
