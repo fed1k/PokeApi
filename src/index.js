@@ -1,18 +1,5 @@
 import './style.scss';
 import { loadLikes, postLike } from './APIcall.js';
-// import arrayOfCards from './data.js';
-// import movieImage from './movieImage.png';
-// import { get } from 'lodash';
-
-// const array = [];
-// const getImage = async (link) => {
-
-//   array.push(json.sprites.front_default);
-// };
-
-// array.forEach((element) => {
-//   console.log(element);
-// });
 
 const getData = async () => {
   const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
@@ -72,5 +59,3 @@ empty.addEventListener('click', () => {
   ul.classList.remove('sidebar-active');
   firstMenuBtn.style.display = 'block';
 });
-
-// console.log(arrayOfCards);

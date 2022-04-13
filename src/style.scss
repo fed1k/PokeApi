@@ -1,146 +1,146 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: Poppins, serif;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, serif;
 }
 
 .nav-list-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .hamburger-menu {
-    display: none;
+  display: none;
 }
 
 .nav-list {
-    list-style: none;
-    padding: 5px 20px;
-    font-size: 18px;
+  list-style: none;
+  padding: 5px 20px;
+  font-size: 18px;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    padding: 25px 0;
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .main {
-    display: grid;
-    grid-template-columns: 20% 20% 20%;
-    grid-gap: 30px;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: 20% 20% 20%;
+  grid-gap: 30px;
+  justify-content: center;
 }
 
 i {
-    float: right;
-    color: #fe0000;
+  float: right;
+  color: #fe0000;
 }
 
 .likeCounts {
-    align-self: flex-end;
+  align-self: flex-end;
 }
 
 i:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .home-button {
-    background-color: #fff;
-    border: 3px solid black;
-    padding: 4px 0;
-    font-size: 16px;
+  background-color: #fff;
+  border: 3px solid black;
+  padding: 4px 0;
+  font-size: 16px;
 }
 
 .home-button:hover {
-    cursor: pointer;
-    color: white;
-    background-color: #1e1e1e;
+  cursor: pointer;
+  color: white;
+  background-color: #1e1e1e;
 }
 
 footer {
-    padding: 25px 20px;
-    border-top: 3px solid black;
-    margin-top: 30px;
+  padding: 25px 20px;
+  border-top: 3px solid black;
+  margin-top: 30px;
 }
 
 #sidebarList-items {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 760px) {
-    .main {
-        grid-template-columns: 40% 40%;
-    }
+  .main {
+    grid-template-columns: 40% 40%;
+  }
 
-    .nav-list {
-        display: none;
-    }
+  .nav-list {
+    display: none;
+  }
 
-    .hamburger-items1,
-    .hamburger-items2,
-    .hamburger-items3 {
-      width: 35px;
-      height: 5px;
-      background-color: black;
-      margin-top: 5px;
-    }
+  .hamburger-items1,
+  .hamburger-items2,
+  .hamburger-items3 {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin-top: 5px;
+  }
 
-    .hamburger-menu {
-        display: inline-block;
-    }
+  .hamburger-menu {
+    display: inline-block;
+  }
 
-    nav {
-        justify-content: flex-start;
-        padding-left: 8%;
-        height: 60px;
-    }
+  nav {
+    justify-content: flex-start;
+    padding-left: 8%;
+    height: 60px;
+  }
 
-    .sidebar {
-        transform: translateX(-150%);
-        height: 100vh;
-        width: 100vw;
-        list-style: none;
-        background-color: rgba(32, 32, 35, 65%);
-        color: white;
-        top: 0;
-        left: 0;
-    }
+  .sidebar {
+    transform: translateX(-150%);
+    height: 100vh;
+    width: 100vw;
+    list-style: none;
+    background-color: rgba(32, 32, 35, 65%);
+    color: white;
+    top: 0;
+    left: 0;
+  }
 
-    .sidebar-active {
-        display: flex;
-        position: fixed;
-        transform: translateX(0%);
-        transition: all ease-out 0.1s;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;   
-    }
+  .sidebar-active {
+    display: flex;
+    position: fixed;
+    transform: translateX(0%);
+    transition: all ease-out 0.1s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 
-    #sidebarList-items {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        padding-top: 20px;
-        gap: 15px;
-        height: 100vh;
-        width: 40%;
-        background-color: rgba(32, 32, 35);
-        z-index: 3;
-    }
+  #sidebarList-items {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 15px;
+    height: 100vh;
+    width: 40%;
+    background-color: rgba(32, 32, 35);
+    z-index: 3;
+  }
 
-    .unvisible {
-        opacity: 0.3;
-    }
+  .unvisible {
+    opacity: 0.3;
+  }
 
-    .empty {
-        width: 60%;
-    }
+  .empty {
+    width: 60%;
+  }
 }
