@@ -1,5 +1,4 @@
 import './style.scss';
-import logo from './logo.png';
 import { loadLikes, postLike } from './APIcall.js';
 
 const getData = async () => {
