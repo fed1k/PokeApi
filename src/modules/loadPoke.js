@@ -1,5 +1,6 @@
 import getPokeDesc from './descript.js';
-import { getInfo } from './APIcall.js';
+import rsvSubmit from './rsvFormVal.js';
+import { getInfo, postComment, postReservation } from './APIcall.js';
 
 const loadPopup = (pokeId, type) => {
   getPokeDesc(pokeId)
@@ -53,18 +54,94 @@ const loadPopup = (pokeId, type) => {
       pokeReserv.appendChild(ReservTitle);
       pokeReserv.appendChild(rsvList);
 
+      // Form
+      const rsvForm = document.createElement('form');
+      rsvForm.classList = 'rsvDiv reserve';
+
+      const formTitle = document.createElement('h3');
+      rsvForm.appendChild(formTitle);
+
+      const formName = document.createElement('input');
+      formName.setAttribute('class', 'input');
+      formName.setAttribute('id', 'name');
+      formName.setAttribute('type', 'text');
+      formName.setAttribute('name', 'name');
+      formName.setAttribute('required', '');
+      formName.setAttribute('placeholder', 'Your Name');
+      rsvForm.appendChild(formName);
+
+      const formMessage = document.createElement('textarea');
+      formMessage.setAttribute('class', 'input');
+      formMessage.setAttribute('id', 'message');
+      formMessage.setAttribute('name', 'message');
+      formMessage.setAttribute('maxlength', '250');
+      formMessage.setAttribute('required', '');
+      formMessage.setAttribute('placeholder', 'Your Insights');
+
+      const formDateStart = document.createElement('input');
+      formDateStart.setAttribute('class', 'input');
+      formDateStart.setAttribute('id', 'startDate');
+      formDateStart.setAttribute('type', 'text');
+      formDateStart.setAttribute('name', 'dateStart');
+      formDateStart.setAttribute('required', '');
+      formDateStart.setAttribute('placeholder', 'Start date (mm/dd/yyyy)');
+
+      const formDateEnd = document.createElement('input');
+      formDateEnd.setAttribute('class', 'input');
+      formDateEnd.setAttribute('id', 'endDate');
+      formDateEnd.setAttribute('type', 'text');
+      formDateEnd.setAttribute('name', 'dateStart');
+      formDateEnd.setAttribute('required', '');
+      formDateEnd.setAttribute('placeholder', 'Start date (mm/dd/yyyy)');
+
+      const formSubmit = document.createElement('input');
+      formSubmit.setAttribute('class', 'rsvBtn');
+      formSubmit.setAttribute('id', 'rsvBtn');
+      formSubmit.setAttribute('type', 'submit');
+
+      const date = new Date();
+
+      if (type === 'Comment') {
+        formTitle.innerHTML = 'Add a Comment';
+        rsvForm.appendChild(formMessage);
+        formSubmit.setAttribute('name', 'Comment');
+        formSubmit.setAttribute('value', 'Comment');
+      } else if (type === 'Reservation') {
+        formTitle.innerHTML = 'Add a Reservation';
+        rsvForm.appendChild(formDateStart);
+        rsvForm.appendChild(formDateEnd);
+        formSubmit.setAttribute('name', 'Reservation');
+        formSubmit.setAttribute('value', 'Reserve');
+      }
+      rsvForm.appendChild(formSubmit);
+
+      if (type === 'Reservation') {
+        rsvSubmit(rsvForm, rsvForm.querySelector(':last-child').name);
+      }
+
+      rsvForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (type === 'Comment') {
+          rsvList.innerHTML += `<li>${date.toISOString().split('T')[0]} ${formName.value}: ${formMessage.value}</li>`;
+          postComment(poke.name, formName.value, formMessage.value);
+        } else {
+          rsvList.innerHTML += `<li>${formDateStart.value} - ${formDateEnd.value} by ${formName.value}</li>`;
+          postReservation(poke.name, formName.value, formDateStart.value, formDateEnd.value);
+        }
+        rsvForm.reset();
+      });
+
       if (type === 'Comment') {
         loadCont[0].appendChild(pokeImage);
         loadCont[0].appendChild(pokeInfo);
         loadCont[0].appendChild(pokeReserv);
+        loadCont[0].appendChild(rsvForm);
       } else if (type === 'Reservation') {
         loadCont[1].appendChild(pokeImage);
         loadCont[1].appendChild(pokeInfo);
         loadCont[1].appendChild(pokeReserv);
+        loadCont[1].appendChild(rsvForm);
       }
-
-      const rsvCount = pokeReserv.querySelector('rsvCount');
-      rsvCount.innerHTML = 5;
     });
 };
 
