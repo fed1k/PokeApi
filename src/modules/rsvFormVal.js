@@ -29,15 +29,19 @@ const checkDate = (dateIn) => {
   return false;
 };
 
-const rsvSubmit = (element) => {
+const rsvSubmit = (element, type) => {
   element.addEventListener('submit', (e) => {
     e.preventDefault();
-    const rsvInputs = element.querySelectorAll('input');
+    const rsvInputs = element.querySelectorAll('*');
 
-    if (checkDate(rsvInputs[1].value) && checkDate(rsvInputs[2].value)) {
+    if (type === 'Reservation') {
+      if (checkDate(rsvInputs[2].value) && checkDate(rsvInputs[3].value)) {
+        console.log('good');
+      } else {
+        dateError();
+      }
+    } else if (type === 'Comment') {
       console.log('good');
-    } else {
-      dateError();
     }
   });
 };

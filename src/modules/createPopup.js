@@ -55,7 +55,7 @@ const createPopup = (type) => {
     rsvForm.innerHTML = `<h3>Add a ${type}</h3>
     <input class="input" type="text" name="name" value="" required placeholder="Your Name">
     <textarea class="input" name="Message" maxlength="500" required placeholder="Your Insights"></textarea>
-    <input class="rsvBtn" type="submit" name="reservate" value="Reserve">`;
+    <input class="rsvBtn" type="submit" name="Comment" value="Comment">`;
   }
 
   // Form reservation
@@ -65,7 +65,7 @@ const createPopup = (type) => {
     <input class="input" type="text" name="name" value="" required placeholder="Your Name">
     <input class="input" type="text" name="dateStart" value="" required placeholder="Start date (mm/dd/yyyy)">
     <input class="input" type="text" name="dateEnd" value="" height="58px" placeholder="End date (mm/dd/yyyy)">
-    <input class="rsvBtn" type="submit" name="reservate" value="Reserve">`;
+    <input class="rsvBtn" type="submit" name="Reservation" value="Reserve">`;
   }
 
   // Apendding elements
@@ -77,7 +77,7 @@ const createPopup = (type) => {
   body.appendChild(popUp);
 
   // Form validation listener
-  rsvSubmit(rsvForm);
+  rsvSubmit(rsvForm, rsvForm.querySelector(':last-child').name);
 };
 
 export default createPopup;
