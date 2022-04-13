@@ -15,6 +15,9 @@ const getData = async () => {
       const response1 = await fetch(json.results[i].url);
       const json2 = await response1.json();
       const card = document.createElement('div');
+      // if (i !== 0 && i !== 1 && i !== 2) {
+      card.setAttribute('data-aos', 'fade-right');
+      // }
       card.className = 'card';
       card.innerHTML = `
       <img src="${json2.sprites.front_default}"></img>
@@ -56,6 +59,14 @@ const getData = async () => {
         extraLike += 1;
         likesCount.innerHTML = `likes ${likes + extraLike}`;
         postLike(json.results[i].name);
+      });
+      heartIcon.addEventListener('mousedown', () => {
+        heartIcon.style.transform = 'scale(.7)';
+        heartIcon.classList.add('fas');
+      });
+      heartIcon.addEventListener('mouseup', () => {
+        heartIcon.style.transform = 'scale(1)';
+        heartIcon.classList.remove('fas');
       });
       likesCount.innerHTML = `likes ${likes}`;
     };
