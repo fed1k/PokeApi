@@ -1,4 +1,5 @@
 import './style.scss';
+import { loadLikes, postLike, getLikes } from './APIcall.js';
 // import arrayOfCards from './data.js';
 // import movieImage from './movieImage.png';
 // import { get } from 'lodash';
