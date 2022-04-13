@@ -128,6 +128,8 @@ const loadPopup = (pokeId, type) => {
           rsvList.innerHTML += `<li>${formDateStart.value} - ${formDateEnd.value} by ${formName.value}</li>`;
           postReservation(poke.name, formName.value, formDateStart.value, formDateEnd.value);
         }
+
+        ReservTitle.querySelector('.rsvCount').innerHTML = rsvList.getElementsByTagName('li').length;
         rsvForm.reset();
       });
 
