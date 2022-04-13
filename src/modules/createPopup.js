@@ -15,6 +15,11 @@ const createPopup = (type) => {
   close.addEventListener('click', () => {
     popUp.classList = 'popUp';
   });
+  popUp.addEventListener('click', (e) => {
+    if (e.target.classList.contains('popUp')) {
+      popUp.classList = 'popUp';
+    }
+  });
 
   // Load Container
   const loadCont = document.createElement('div');

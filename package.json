@@ -25,6 +25,9 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.5.1",
     "gh-pages": "^3.2.3",
     "lodash": "^4.17.21"
   },
@@ -34,7 +37,8 @@
     "start": "webpack serve --open",
     "deploy": "gh-pages -d dist",
     "linters": "npx eslint . && npx stylelint **/*.{css,scss} && npx hint .",
-    "fixlinters": "npx eslint ./src --fix && npx stylelint **/*.{css,scss} --fix"
+    "fixlinters": "npx eslint ./src --fix && npx stylelint **/*.{css,scss} --fix",
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
