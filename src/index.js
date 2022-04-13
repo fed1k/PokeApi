@@ -22,30 +22,30 @@ const getData = async () => {
       <p class="likeCounts">likes ${0}</p>
   `;
 
-  // Buttons for comment and reservation
-  const cmntBtn = document.createElement('button');
-  cmntBtn.classList = 'home-button comment-buttons';
-  cmntBtn.name = `${json.results[i].name}`;
-  cmntBtn.innerText = 'Comments';
-  const rsvBtn = document.createElement('button');
-  rsvBtn.classList = 'home-button reservation-buttons';
-  rsvBtn.name = `${json.results[i].name}`;
-  rsvBtn.innerText = 'Reservations';
-  card.appendChild(cmntBtn);
-  card.appendChild(rsvBtn);
+      // Buttons for comment and reservation
+      const cmntBtn = document.createElement('button');
+      cmntBtn.classList = 'home-button comment-buttons';
+      cmntBtn.name = `${json.results[i].name}`;
+      cmntBtn.innerText = 'Comments';
+      const rsvBtn = document.createElement('button');
+      rsvBtn.classList = 'home-button reservation-buttons';
+      rsvBtn.name = `${json.results[i].name}`;
+      rsvBtn.innerText = 'Reservations';
+      card.appendChild(cmntBtn);
+      card.appendChild(rsvBtn);
 
-  // Listeners
-  cmntBtn.addEventListener('click', () => {
-    const popBox = document.querySelectorAll('.popUp');
-    popBox[0].classList.add('showFlex');
-    loadPopup(cmntBtn.name, 'Comment');
-  });
+      // Listeners
+      cmntBtn.addEventListener('click', () => {
+        const popBox = document.querySelectorAll('.popUp');
+        popBox[0].classList.add('showFlex');
+        loadPopup(cmntBtn.name, 'Comment');
+      });
 
-  rsvBtn.addEventListener('click', () => {
-    const popBox = document.querySelectorAll('.popUp');
-    popBox[1].classList.add('showFlex');
-    loadPopup(rsvBtn.name, 'Reservation');
-  });
+      rsvBtn.addEventListener('click', () => {
+        const popBox = document.querySelectorAll('.popUp');
+        popBox[1].classList.add('showFlex');
+        loadPopup(rsvBtn.name, 'Reservation');
+      });
 
       main.appendChild(card);
       const heartIcon = card.querySelector('.far');
@@ -60,9 +60,7 @@ const getData = async () => {
       likesCount.innerHTML = `likes ${likes}`;
     };
     getImage();
-
   }
-
 };
 getData();
 
