@@ -30,19 +30,17 @@ const getData = async () => {
       <button type="button" class="home-button reservation-buttons">Reservations</button>
   `;
       main.appendChild(card);
+      const heartIcon = card.querySelector('.far');
+      heartIcon.addEventListener('click', () => {
+        heartIcon.classList.toggle('fas');
+      });
     };
     getImage();
   }
 };
 getData();
 
-const like = document.querySelectorAll('.far');
-like.forEach((element) => {
-  element.addEventListener('click', () => {
-    element.classList.toggle('fas');
-  });
-});
-
+//
 const hamburgerBtn = document.querySelector('.hamburger-menu');
 
 const ul = document.createElement('div');
