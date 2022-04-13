@@ -21,12 +21,14 @@ const getData = async () => {
       main.appendChild(card);
       const heartIcon = card.querySelector('.far');
       const likesCount = card.querySelector('.likeCounts');
-      heartIcon.addEventListener('click', () => {
+      const likes = await loadLikes(json.results[i].name);
+      let extraLike = 0;
+      heartIcon.addEventListener('click', async () => {
+        extraLike += 1;
+        likesCount.innerHTML = `likes ${likes + extraLike}`;
         postLike(json.results[i].name);
-        loadLikes(json.results[i].name, likesCount);
       });
-
-      loadLikes(json.results[i].name, likesCount);
+      likesCount.innerHTML = `likes ${likes}`;
     };
     getImage();
   }

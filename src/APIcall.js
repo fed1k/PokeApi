@@ -22,7 +22,7 @@ const createLi = (type, items) => {
 
 // GET
 const getLikes = async () => {
-  const result = await fetch((baseURL + likes), { method: 'GET' });
+  const result = await fetch((baseURL + likes));
   const data = await result.text();
   return JSON.parse(data);
 };
@@ -93,10 +93,10 @@ const loadData = (id, type) => {
   });
 };
 
-const loadLikes = async (id, likesCount) => {
+const loadLikes = async (id) => {
   const totalLikes = await getLikes();
   const itemLikes = totalLikes.find((x) => x.item_id === id);
-  likesCount.innerHTML = `likes ${itemLikes !== undefined ? itemLikes.likes : 0}`;
+  return itemLikes !== undefined ? itemLikes.likes : 0;
 };
 
 export {
