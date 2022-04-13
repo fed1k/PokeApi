@@ -1,10 +1,11 @@
 import getPokeDesc from './descript.js';
 
-const loadPopup = (pokeId) => {
+const loadPopup = (pokeId, type) => {
   getPokeDesc(pokeId)
     .then((poke) => {
-      const loadCont = document.querySelector('.pokeLoad');
-      loadCont.innerHTML = '';
+      const loadCont = document.querySelectorAll('.pokeLoad');
+      loadCont[0].innerHTML = '';
+      loadCont[1].innerHTML = '';
 
       // Image
       const pokeImage = document.createElement('div');
@@ -25,15 +26,21 @@ const loadPopup = (pokeId) => {
       // Reservations
       const pokeReserv = document.createElement('div');
       pokeReserv.classList = 'rsvDiv reservation';
-      pokeReserv.innerHTML = `<h3>Reservations <span class="rsvCount">(2)</span></h3>
+      pokeReserv.innerHTML = `<h3>${type}s <span class="rsvCount">(2)</span></h3>
       <ul class="rsvList">
         <li>03/11/2021 - 03/12/2021 by Alex</li>
         <li>03/14/2021 - 03/16/2021 by Mia</li>
       </ul>`;
 
-      loadCont.appendChild(pokeImage);
-      loadCont.appendChild(pokeInfo);
-      loadCont.appendChild(pokeReserv);
+      if (type === 'Comment') {
+        loadCont[0].appendChild(pokeImage);
+        loadCont[0].appendChild(pokeInfo);
+        loadCont[0].appendChild(pokeReserv);
+      } else if (type === 'Reservation') {
+        loadCont[1].appendChild(pokeImage);
+        loadCont[1].appendChild(pokeInfo);
+        loadCont[1].appendChild(pokeReserv);
+      }
     });
 };
 
