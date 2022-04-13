@@ -24,26 +24,29 @@ body {
   border: solid #000 1px;
   background: #fff;
   width: 400px;
-  min-height: 650px;
+  min-height: 580px;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 
   h2,
   h3 {
+    margin: 2px 0 0;
     text-align: center;
   }
 }
 
 .pokeLoad {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .pokeImg {
-  width: 40%;
+  width: 100px;
 
   img {
     width: 100%;
@@ -69,11 +72,18 @@ body {
 
 .rsvList {
   padding: 0;
+  max-height: 90px;
+  max-width: 100%;
   list-style: none;
+  overflow-y: auto;
+
+  li {
+    border-bottom: solid #eee 1px;
+  }
 }
 
 .reserve {
-  width: 75%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 
@@ -96,6 +106,10 @@ body {
 .close {
   position: relative;
   margin-left: auto;
+
+  :hover {
+    cursor: pointer;
+  }
 }
 
 .gg-close {

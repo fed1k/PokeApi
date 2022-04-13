@@ -54,7 +54,7 @@ const createPopup = (type) => {
     rsvForm.classList = 'rsvDiv reserve';
     rsvForm.innerHTML = `<h3>Add a ${type}</h3>
     <input class="input" type="text" name="name" value="" required placeholder="Your Name">
-    <textarea class="input" name="Message" maxlength="500" required placeholder="Your Insights"></textarea>
+    <textarea class="input" name="Message" maxlength="250" required placeholder="Your Insights"></textarea>
     <input class="rsvBtn" type="submit" name="Comment" value="Comment">`;
   }
 
