@@ -118,18 +118,21 @@ const loadPopup = (pokeId, type) => {
       rsvForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const rsvInputs = rsvForm.querySelectorAll('*')
+        const rsvInputs = rsvForm.querySelectorAll('*');
 
         if (type === 'Comment') {
           rsvList.innerHTML += `<li>${date.toISOString().split('T')[0]} ${formName.value}: ${formMessage.value}</li>`;
           postComment(poke.name, formName.value, formMessage.value);
-        } else if (checkDate(rsvInputs[2].value, rsvForm, 2) && checkDate(rsvInputs[3].value, rsvForm, 3)) {
+          rsvForm.reset();
+        } else if (
+          checkDate(rsvInputs[2].value, rsvForm, 2)
+          && checkDate(rsvInputs[3].value, rsvForm, 3)) {
           rsvList.innerHTML += `<li>${formDateStart.value} - ${formDateEnd.value} by ${formName.value}</li>`;
           postReservation(poke.name, formName.value, formDateStart.value, formDateEnd.value);
+          rsvForm.reset();
         }
 
         ReservTitle.querySelector('.rsvCount').innerHTML = rsvList.getElementsByTagName('li').length;
-        rsvForm.reset();
       });
 
       if (type === 'Comment') {
