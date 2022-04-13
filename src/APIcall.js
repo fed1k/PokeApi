@@ -22,7 +22,7 @@ const createLi = (type, items) => {
 
 // GET
 const getLikes = async () => {
-  const result = await fetch((baseURL + likes), { method: 'GET' });
+  const result = await fetch((baseURL + likes));
   const data = await result.text();
   return JSON.parse(data);
 };
