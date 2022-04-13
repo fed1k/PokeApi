@@ -1,5 +1,10 @@
 import './style.scss';
 import { loadLikes, postLike } from './APIcall.js';
+import createPopup from './modules/createPopup.js';
+import loadPopup from './modules/loadPoke.js';
+
+createPopup('Comment');
+createPopup('Reservation');
 
 const getData = async () => {
   const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
@@ -15,9 +20,33 @@ const getData = async () => {
       <img src="${json2.sprites.front_default}"></img>
       <p>${json.results[i].name}<i class="far fa-heart"></i></p>
       <p class="likeCounts">likes ${0}</p>
-      <button type="button" class="home-button comment-buttons">Comments</button>
-      <button type="button" class="home-button reservation-buttons">Reservations</button>
   `;
+
+      // Buttons for comment and reservation
+      const cmntBtn = document.createElement('button');
+      cmntBtn.classList = 'home-button comment-buttons';
+      cmntBtn.name = `${json.results[i].name}`;
+      cmntBtn.innerText = 'Comments';
+      const rsvBtn = document.createElement('button');
+      rsvBtn.classList = 'home-button reservation-buttons';
+      rsvBtn.name = `${json.results[i].name}`;
+      rsvBtn.innerText = 'Reservations';
+      card.appendChild(cmntBtn);
+      card.appendChild(rsvBtn);
+
+      // Listeners
+      cmntBtn.addEventListener('click', () => {
+        const popBox = document.querySelectorAll('.popUp');
+        popBox[0].classList.add('showFlex');
+        loadPopup(cmntBtn.name, 'Comment');
+      });
+
+      rsvBtn.addEventListener('click', () => {
+        const popBox = document.querySelectorAll('.popUp');
+        popBox[1].classList.add('showFlex');
+        loadPopup(rsvBtn.name, 'Reservation');
+      });
+
       main.appendChild(card);
       const heartIcon = card.querySelector('.far');
       const likesCount = card.querySelector('.likeCounts');

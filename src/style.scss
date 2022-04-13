@@ -152,3 +152,138 @@ footer {
     width: 60%;
   }
 }
+
+.popUp {
+  background: rgba(170, 180, 170, 0.4);
+  backdrop-filter: blur(1px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.showFlex {
+  display: flex;
+}
+
+.popBox {
+  border: solid #000 1px;
+  background: #fff;
+  width: 400px;
+  min-height: 580px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  h2,
+  h3 {
+    margin: 2px 0 0;
+    text-align: center;
+  }
+}
+
+.pokeLoad {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokeImg {
+  width: 100px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.description {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.descEl {
+  display: flex;
+  flex-direction: column;
+}
+
+.attName {
+  font-weight: bold;
+}
+
+.rsvList {
+  padding: 0;
+  max-height: 90px;
+  max-width: 100%;
+  list-style: none;
+  overflow-y: auto;
+
+  li {
+    border-bottom: solid #eee 1px;
+  }
+}
+
+.reserve {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .input {
+    box-sizing: border-box;
+    padding: 5px;
+    margin-bottom: 8px;
+    width: 200px;
+    margin-right: auto;
+  }
+}
+
+.rsvBtn {
+  width: 100px;
+  font-size: 18px;
+  font-weight: bold;
+  background: none;
+}
+
+.close {
+  position: relative;
+  margin-left: auto;
+
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.gg-close {
+  margin-left: auto;
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.gg-close::after,
+.gg-close::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: currentColor;
+  transform: rotate(45deg);
+  border-radius: 5px;
+  top: 13px;
+}
+
+.gg-close::after {
+  transform: rotate(-45deg);
+}
