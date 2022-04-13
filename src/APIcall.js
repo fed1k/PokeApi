@@ -47,6 +47,7 @@ const postLike = async (id) => {
   });
 
   const data = await response.text();
+  console.log(data);
   return data;
 };
 

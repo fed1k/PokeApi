@@ -13,6 +13,7 @@ import { loadLikes, postLike, getLikes } from './APIcall.js';
 // array.forEach((element) => {
 //   console.log(element);
 // });
+
 const getData = async () => {
   const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
   const json = await response.json();
@@ -33,7 +34,7 @@ const getData = async () => {
       main.appendChild(card);
       const heartIcon = card.querySelector('.far');
       heartIcon.addEventListener('click', () => {
-        heartIcon.classList.toggle('fas');
+        postLike(json.results[i].name);
       });
     };
     getImage();
