@@ -25,27 +25,19 @@ const createPopup = (type) => {
   // Image
   const pokeImage = document.createElement('div');
   pokeImage.classList = 'rsvDiv pokeImg';
-  pokeImage.innerHTML = '<img src="https://imagenpng.com/wp-content/uploads/2016/09/Pikachu-png-1-635x6241.png" alt="pikachu">';
+  pokeImage.innerHTML = '<h3>Loading...</h3>';
 
   // Descript
   const pokeInfo = document.createElement('div');
   pokeInfo.classList = 'rsvDiv info';
-  pokeInfo.innerHTML = `<h2 class="pokeName">name</h2>
-  <ul class="description">
-    <li class="descEl"><span class="attName">Type</span><span class="attValue">type</span></li>
-    <li class="descEl"><span class="attName">Abilities</span><span class="attValue">abilities</span></li>
-    <li class="descEl"><span class="attName">Height</span><span class="attValue">height</span></li>
-    <li class="descEl"><span class="attName">Weight</span><span class="attValue">weight</span></li>
-  </ul>`;
+  pokeInfo.innerHTML = `<h2 class="pokeName">Who is that pokemon?</h2>
+  <ul class="description">Loading...</ul>`;
 
   // Reservations
   const pokeReserv = document.createElement('div');
   pokeReserv.classList = 'rsvDiv reservation';
-  pokeReserv.innerHTML = `<h3>${type}s <span class="rsvCount">(2)</span></h3>
-    <ul class="rsvList">
-      <li>03/11/2021 - 03/12/2021 by Alex</li>
-      <li>03/14/2021 - 03/16/2021 by Mia</li>
-    </ul>`;
+  pokeReserv.innerHTML = `<h3>${type}s <span class="rsvCount">()</span></h3>
+    <ul class="rsvList">Loading...</ul>`;
 
   const rsvForm = document.createElement('form');
 

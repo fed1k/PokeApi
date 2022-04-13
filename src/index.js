@@ -11,10 +11,10 @@ const cmntBtn = document.querySelectorAll('.showCmnt')[0];
 
 cmntBtn.addEventListener('click', () => {
   popBox[0].classList.add('showFlex');
-  loadPopup('pikachu', 'Comment');
+  loadPopup(cmntBtn.name, 'Comment');
 });
 
 rsvBtn.addEventListener('click', () => {
   popBox[1].classList.add('showFlex');
-  loadPopup('pikachu', 'Reservation');
+  loadPopup(rsvBtn.name, 'Reservation');
 });
