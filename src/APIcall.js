@@ -93,13 +93,10 @@ const loadData = (id, type) => {
   });
 };
 
-const loadLikes = async (id) => {
+const loadLikes = async (id, likesCount) => {
   const totalLikes = await getLikes();
   const itemLikes = totalLikes.find((x) => x.item_id === id);
-  let likes = 0;
-  if (itemLikes) {
-    likes = itemLikes.likes;
-  }
+  likesCount.innerHTML = `likes ${itemLikes !== undefined ? itemLikes.likes : 0}`;
 };
 
 export {

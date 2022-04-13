@@ -1,5 +1,5 @@
 import './style.scss';
-import { loadLikes, postLike, getLikes } from './APIcall.js';
+import { loadLikes, postLike } from './APIcall.js';
 // import arrayOfCards from './data.js';
 // import movieImage from './movieImage.png';
 // import { get } from 'lodash';
@@ -27,15 +27,19 @@ const getData = async () => {
       card.innerHTML = `
       <img src="${json2.sprites.front_default}"></img>
       <p>${json.results[i].name}<i class="far fa-heart"></i></p>
-      <p class="likeCounts">likes ${5}</p>
+      <p class="likeCounts">likes ${0}</p>
       <button type="button" class="home-button comment-buttons">Comments</button>
       <button type="button" class="home-button reservation-buttons">Reservations</button>
   `;
       main.appendChild(card);
       const heartIcon = card.querySelector('.far');
+      const likesCount = card.querySelector('.likeCounts');
       heartIcon.addEventListener('click', () => {
         postLike(json.results[i].name);
+        loadLikes(json.results[i].name, likesCount);
       });
+
+      loadLikes(json.results[i].name, likesCount);
     };
     getImage();
   }
