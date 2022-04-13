@@ -23,6 +23,11 @@ nav {
   display: flex;
   justify-content: center;
   padding: 25px 0;
+  background-image: url(pokemonLogo.jpg);
+  background-size: 130px;
+  background-repeat: no-repeat;
+  background-position-x: 10%;
+  background-color: #f6f6f6;
 }
 
 .card {
@@ -100,6 +105,9 @@ footer {
     justify-content: flex-start;
     padding-left: 8%;
     height: 60px;
+    background-position-x: 90%;
+    background-position-y: center;
+    background-size: 100px;
   }
 
   .sidebar {
