@@ -1,5 +1,5 @@
 import './style.scss';
-import { loadLikes, postLike } from './APIcall.js';
+import { loadLikes, postLike } from './modules/APIcall.js';
 import createPopup from './modules/createPopup.js';
 import loadPopup from './modules/loadPoke.js';
 
