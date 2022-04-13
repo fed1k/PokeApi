@@ -35,19 +35,4 @@ const checkDate = (dateIn, element, box) => {
   return false;
 };
 
-const rsvSubmit = (element, type) => {
-  element.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const rsvInputs = element.querySelectorAll('*');
-
-    if (type === 'Reservation') {
-      if (checkDate(rsvInputs[2].value, element, 2) && checkDate(rsvInputs[3].value, element, 3)) {
-        console.log('good'); // Replace with Reservation API code
-      }
-    } else if (type === 'Comment') {
-      console.log('good'); // Replace with Comment API code
-    }
-  });
-};
-
-export default rsvSubmit;
+export default checkDate;

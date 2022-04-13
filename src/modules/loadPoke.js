@@ -1,5 +1,5 @@
 import getPokeDesc from './descript.js';
-import rsvSubmit from './rsvFormVal.js';
+import checkDate from './rsvFormVal.js';
 import { getInfo, postComment, postReservation } from './APIcall.js';
 
 const loadPopup = (pokeId, type) => {
@@ -115,16 +115,15 @@ const loadPopup = (pokeId, type) => {
       }
       rsvForm.appendChild(formSubmit);
 
-      if (type === 'Reservation') {
-        rsvSubmit(rsvForm, rsvForm.querySelector(':last-child').name);
-      }
-
       rsvForm.addEventListener('submit', (e) => {
         e.preventDefault();
+
+        const rsvInputs = rsvForm.querySelectorAll('*')
+
         if (type === 'Comment') {
           rsvList.innerHTML += `<li>${date.toISOString().split('T')[0]} ${formName.value}: ${formMessage.value}</li>`;
           postComment(poke.name, formName.value, formMessage.value);
-        } else {
+        } else if (checkDate(rsvInputs[2].value, rsvForm, 2) && checkDate(rsvInputs[3].value, rsvForm, 3)) {
           rsvList.innerHTML += `<li>${formDateStart.value} - ${formDateEnd.value} by ${formName.value}</li>`;
           postReservation(poke.name, formName.value, formDateStart.value, formDateEnd.value);
         }
