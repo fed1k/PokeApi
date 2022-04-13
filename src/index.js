@@ -37,9 +37,9 @@ const getData = async () => {
       const likes = await loadLikes(json.results[i].name);
       let extraLike = 0;
       heartIcon.addEventListener('click', async () => {
-        postLike(json.results[i].name);
         extraLike += 1;
         likesCount.innerHTML = `likes ${likes + extraLike}`;
+        postLike(json.results[i].name);
       });
       likesCount.innerHTML = `likes ${likes}`;
     };
