@@ -1,5 +1,3 @@
-import rsvSubmit from './rsvFormVal.js';
-
 const body = document.querySelector('#body');
 
 const createPopup = (type) => {
@@ -39,37 +37,12 @@ const createPopup = (type) => {
   pokeReserv.innerHTML = `<h3>${type}s <span class="rsvCount">()</span></h3>
     <ul class="rsvList">Loading...</ul>`;
 
-  const rsvForm = document.createElement('form');
-
-  // Form comment
-  if (type === 'Comment') {
-    rsvForm.classList = 'rsvDiv reserve';
-    rsvForm.innerHTML = `<h3>Add a ${type}</h3>
-    <input class="input" type="text" name="name" value="" required placeholder="Your Name">
-    <textarea class="input" name="Message" maxlength="250" required placeholder="Your Insights"></textarea>
-    <input class="rsvBtn" type="submit" name="Comment" value="Comment">`;
-  }
-
-  // Form reservation
-  if (type === 'Reservation') {
-    rsvForm.classList = 'rsvDiv reserve';
-    rsvForm.innerHTML = `<h3>Add a ${type}</h3>
-    <input class="input" type="text" name="name" value="" required placeholder="Your Name">
-    <input class="input" type="text" name="dateStart" value="" required placeholder="Start date (mm/dd/yyyy)">
-    <input class="input" type="text" name="dateEnd" value="" required placeholder="End date (mm/dd/yyyy)">
-    <input class="rsvBtn" type="submit" name="Reservation" value="Reserve">`;
-  }
-
   // Apendding elements
   popUp.querySelector('section').appendChild(loadCont);
-  popUp.querySelector('section').appendChild(rsvForm);
   loadCont.appendChild(pokeImage);
   loadCont.appendChild(pokeInfo);
   loadCont.appendChild(pokeReserv);
   body.appendChild(popUp);
-
-  // Form validation listener
-  rsvSubmit(rsvForm, rsvForm.querySelector(':last-child').name);
 };
 
 export default createPopup;
