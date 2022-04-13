@@ -1,4 +1,4 @@
-const body = document.querySelector('#body');
+const body = document.querySelector('body');
 
 const createPopup = (type) => {
   const popUp = document.createElement('div');
