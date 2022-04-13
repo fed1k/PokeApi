@@ -77,9 +77,11 @@ body {
   display: flex;
   flex-direction: column;
 
-  input {
+  .input {
+    box-sizing: border-box;
     padding: 5px;
     margin-bottom: 8px;
+    width: 200px;
     margin-right: auto;
   }
 }
