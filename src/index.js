@@ -1,8 +1,8 @@
 import './style.scss';
-import createRsvPopup from './modules/createReservePopup.js';
+import createPopup from './modules/createPopup.js';
 import loadPopup from './modules/loadPoke.js';
 
-createRsvPopup();
+createPopup('Comment');
 
 const popBox = document.querySelectorAll('.popUp');
 const btn = document.querySelector('#showRsv');

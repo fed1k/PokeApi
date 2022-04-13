@@ -2,7 +2,7 @@ import rsvSubmit from './rsvFormVal.js';
 
 const body = document.querySelector('#body');
 
-const createRsvPopup = () => {
+const createPopup = (type) => {
   const popUp = document.createElement('div');
 
   popUp.classList = 'popUp';
@@ -41,20 +41,32 @@ const createRsvPopup = () => {
   // Reservations
   const pokeReserv = document.createElement('div');
   pokeReserv.classList = 'rsvDiv reservation';
-  pokeReserv.innerHTML = `<h3>Reservations <span class="rsvCount">(2)</span></h3>
+  pokeReserv.innerHTML = `<h3>${type}s <span class="rsvCount">(2)</span></h3>
     <ul class="rsvList">
       <li>03/11/2021 - 03/12/2021 by Alex</li>
       <li>03/14/2021 - 03/16/2021 by Mia</li>
     </ul>`;
 
-  // Form
   const rsvForm = document.createElement('form');
-  rsvForm.classList = 'rsvDiv reserve';
-  rsvForm.innerHTML = `<h3>Add a Reservation</h3>
-  <input type="text" name="name" value="" required placeholder="Your Name">
-  <input type="text" name="dateStart" value="" placeholder="Start date (mm/dd/yyyy)">
-  <input type="text" name="dateEnd" value="" placeholder="End date (mm/dd/yyyy)">
-  <input class="rsvBtn" type="submit" name="reservate" value="Reserve">`;
+
+  // Form comment
+  if (type === 'Comment') {
+    rsvForm.classList = 'rsvDiv reserve';
+    rsvForm.innerHTML = `<h3>Add a ${type}</h3>
+    <input class="input" type="text" name="name" value="" required placeholder="Your Name">
+    <textarea class="input" name="Message" maxlength="500" required placeholder="Your Insights"></textarea>
+    <input class="rsvBtn" type="submit" name="reservate" value="Reserve">`;
+  }
+
+  // Form reservation
+  if (type === 'Reservation') {
+    rsvForm.classList = 'rsvDiv reserve';
+    rsvForm.innerHTML = `<h3>Add a ${type}</h3>
+    <input class="input" type="text" name="name" value="" required placeholder="Your Name">
+    <input class="input" type="text" name="dateStart" value="" required placeholder="Start date (mm/dd/yyyy)">
+    <input class="input" type="text" name="dateEnd" value="" height="58px" placeholder="End date (mm/dd/yyyy)">
+    <input class="rsvBtn" type="submit" name="reservate" value="Reserve">`;
+  }
 
   // Apendding elements
   popUp.querySelector('section').appendChild(loadCont);
@@ -68,4 +80,4 @@ const createRsvPopup = () => {
   rsvSubmit(rsvForm);
 };
 
-export default createRsvPopup;
+export default createPopup;
