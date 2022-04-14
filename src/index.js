@@ -6,16 +6,32 @@ import loadPopup from './modules/loadPoke.js';
 createPopup('Comment');
 createPopup('Reservation');
 
+// Including number of pokemons
+const findLengthOfPokemons = async () => {
+  const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
+  const json = await response.json();
+  const navbar = document.querySelector('.nav-list-container');
+  const pokemonText = document.createElement('li');
+  const pokemonText2 = document.createElement('li');
+  pokemonText.className = 'nav-list';
+  pokemonText.textContent = `Pokemons(${json.results.length})`;
+  pokemonText2.textContent = `Pokemons(${json.results.length})`;
+  navbar.appendChild(pokemonText);
+  const sidebar = document.querySelector('#sidebarList-items');
+  const list = document.querySelector('.unvisible');
+  sidebar.insertBefore(pokemonText2, list);
+
+};
+
 const getData = async () => {
   const response = await fetch('https://pokeapi.co/api/v2/pokemon/');
   const json = await response.json();
   const main = document.querySelector('.main');
-  for (let i = 0; i < 18; i += 1) {
+  for (let i = 0; i < json.results.length; i += 1) {
     const getImage = async () => {
       const response1 = await fetch(json.results[i].url);
       const json2 = await response1.json();
       const card = document.createElement('div');
-      // if (i !== 0 && i !== 1 && i !== 2) {
       card.setAttribute('data-aos', 'fade-right');
       // }
       card.className = 'card';
@@ -72,6 +88,7 @@ const getData = async () => {
     };
     getImage();
   }
+  findLengthOfPokemons();
 };
 getData();
 
