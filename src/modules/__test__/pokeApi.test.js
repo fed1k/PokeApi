@@ -3,8 +3,8 @@ import getPoke from '../pokeApi.js';
 beforeAll(() => {
   global.fetch = jest.fn(() => {
     Promise.resolve({
-      json: () => Promise.resolve({name: "pikachu", height: 40}),
-    })
+      json: () => Promise.resolve({ name: 'pikachu', height: 40 }),
+    });
   });
 });
 
@@ -16,8 +16,6 @@ describe('getPoke Api call', () => {
   });
 
   test('Correct fetch URL', async () => {
-    const getData = await getPoke('pikachu');
-
     expect(fetch).toHaveBeenCalledWith('https://pokeapi.co/api/v2/pokemon/pikachu/');
-  })
+  });
 });

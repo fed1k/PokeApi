@@ -14,4 +14,4 @@ const getPokeDesc = async (pokeId) => {
   return pokemon;
 };
 
-export {getPokeDesc};
+export { getPokeDesc };

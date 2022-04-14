@@ -29,7 +29,7 @@ beforeAll(() => {
     </footer>
   </body>`;
   createPopup('Reservation');
-})
+});
 
 describe('Create PopUp', () => {
   test('Add card to DOM', () => {
@@ -38,15 +38,14 @@ describe('Create PopUp', () => {
 
   test('X click remove showFlex class', () => {
     const close = document.querySelector('.close');
-    const popUp =  document.querySelector('.popUp');
+    const popUp = document.querySelector('.popUp');
     close.click();
 
     expect(popUp.classList.value).toBe('popUp');
   });
 
   test('Ousite click remove showFlex class', () => {
-    const close = document.querySelector('.close');
-    const popUp =  document.querySelector('.popUp');
+    const popUp = document.querySelector('.popUp');
     popUp.click();
 
     expect(popUp.classList.value).toBe('popUp');
