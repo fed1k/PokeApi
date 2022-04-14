@@ -1,4 +1,4 @@
-import getPokeDesc from './descript.js';
+import {getPokeDesc} from './descript.js';
 import checkDate from './rsvFormVal.js';
 import { getInfo, postComment, postReservation } from './APIcall.js';
 
