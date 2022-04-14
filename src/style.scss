@@ -23,7 +23,7 @@ nav {
   display: flex;
   justify-content: center;
   padding: 25px 0;
-  background-image: url(pokemonLogo.jpg);
+  background-image: url(./assets/pokemonLogo.jpg);
   background-size: 130px;
   background-repeat: no-repeat;
   background-position-x: 2%;
@@ -197,11 +197,17 @@ footer {
   align-items: center;
 }
 
+.pokeImgMain {
+  width: 200px;
+  margin: auto;
+}
+
 .pokeImg {
-  width: 100px;
+  display: flex;
 
   img {
-    width: 100%;
+    width: 200px;
+    margin: auto;
   }
 }
 
