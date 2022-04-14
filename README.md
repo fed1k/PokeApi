@@ -2,17 +2,27 @@
 
 # KanbanBoard
 
-> In this project, we practice everything we have learned in Webpack and APIs.
+> This web displays characters from the Pokemon universe through the [Pokeapi](https://pokeapi.co/) and allows to post likes, comments and reservations thanks to the [Involvement API](https://www.notion.so/microverse/Involvement-API-869e60b5ad104603aa6db59e08150270), which also allow the page to show a counter of these posts. The project was built using SCSS, JS, HTML and Webpack and tested through Jest.
 
 ## Built With
 
 - HTML
-- CSS
+- SASS
 - JavaScript
+- Webpack
 
 ## Live Demo
 
-For a live demo of the Portfolio [click here](https://fed1k.github.io/KanbanBoard/).
+For a live demo of the project [click here](https://fed1k.github.io/KanbanBoard/).
+
+## Presentation
+
+To see our presentation of the project [click here](https://drive.google.com/file/d/19eKvDP3jG-6t0dDRhX5hg-_UOrNM-7rt/view?usp=sharing).
+
+## Prerequisites
+
+If you haven't yet, you should first [set up Git.](https://docs.github.com/en/get-started/quickstart/set-up-git) Don't forget to [set up authentication to GitHub.com from Git](https://docs.github.com/en/get-started/quickstart/set-up-git#next-steps-authenticating-with-github-from-git) as well.
+
 
 ## Getting Started
 
@@ -25,6 +35,31 @@ To get a local copy of the project, follow these steps:
  ```
  cd KanbanBoard
  ```
+3. Install webpack
+  - Required to run 
+  ```
+  npm init -y
+  ```
+  - Webpack
+  ```
+  npm install webpack webpack-cli --save-dev
+  ```
+  - HTML plugin
+  ```
+  npm install --save-dev html-webpack-plugin
+  ```
+  - CSS plugin
+  ```
+  npm install --save-dev style-loader css-loader
+  ```
+  - Live Server
+  ```
+  npm install --save-dev webpack-dev-server
+  ```
+For the Live Server  || http://localhost:8080/
+```
+npm start
+```
 
 ## Authors
 
