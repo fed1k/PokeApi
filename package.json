@@ -38,9 +38,9 @@
     "deploy": "gh-pages -d dist",
     "linters": "npx eslint . && npx stylelint **/*.{css,scss} && npx hint .",
     "fixlinters": "npx eslint ./src --fix && npx stylelint **/*.{css,scss} --fix",
-    "test": "jest --env=jsdom",
-    "testWatch": "jest --env=jsdom --watch",
-    "coverage": "jest --env=jsdom --coverage"
+    "test": "jest",
+    "testWatch": "jest --watch",
+    "coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",

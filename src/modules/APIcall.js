@@ -100,5 +100,5 @@ const loadLikes = async (id) => {
 };
 
 export {
-  getLikes, getInfo, postLike, postComment, postReservation, loadData, loadLikes,
+  getLikes, getInfo, postLike, postComment, postReservation, loadData, loadLikes, baseURL, comments,
 };
