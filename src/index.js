@@ -20,7 +20,6 @@ const findLengthOfPokemons = async () => {
   const sidebar = document.querySelector('#sidebarList-items');
   const list = document.querySelector('.unvisible');
   sidebar.insertBefore(pokemonText2, list);
-
 };
 
 const getData = async () => {
