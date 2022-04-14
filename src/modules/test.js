@@ -1,5 +1,4 @@
 const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/RizkiI1q9bDyDUIoyu8m';
-
 const comments = '/comments';
 
 async function getComments(id, type) {
@@ -44,7 +43,7 @@ afterAll(() => {
 
 describe('Test Number of comments', () => {
   test('There should be 4 comments', async () => {
-    const json = await getComments('test', comments);
-    expect(json.length).toEqual(4);
+    const commentCount = await getComments('test', comments);
+    expect(commentCount.length).toEqual(4);
   });
 });
