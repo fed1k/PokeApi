@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, serif;
+}
+
+.nav-list-container {
+  display: flex;
+  justify-content: center;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 5px 20px;
+  font-size: 18px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+  background-image: url(./assets/pokemonLogo.jpg);
+  background-size: 130px;
+  background-repeat: no-repeat;
+  background-position-x: 2%;
+  background-color: #f6f6f6;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 20% 20% 20%;
+  grid-gap: 30px;
+  justify-content: center;
+}
+
+i {
+  float: right;
+  color: #fe0000;
+}
+
+.likeCounts {
+  align-self: flex-end;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+.home-button {
+  background-color: #fff;
+  border: 3px solid black;
+  padding: 4px 0;
+  font-size: 16px;
+}
+
+.home-button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #1e1e1e;
+}
+
+footer {
+  padding: 25px 20px;
+  border-top: 3px solid black;
+  margin-top: 30px;
+}
+
+#sidebarList-items {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .main {
+    grid-template-columns: 40% 40%;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .hamburger-items1,
+  .hamburger-items2,
+  .hamburger-items3 {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin-top: 5px;
+  }
+
+  .hamburger-menu {
+    display: inline-block;
+  }
+
+  nav {
+    justify-content: flex-start;
+    padding-left: 8%;
+    height: 60px;
+    background-position-x: 90%;
+    background-position-y: center;
+    background-size: 100px;
+  }
+
+  .sidebar {
+    transform: translateX(-150%);
+    height: 100vh;
+    width: 100vw;
+    list-style: none;
+    background-color: rgba(32, 32, 35, 65%);
+    color: white;
+    top: 0;
+    left: 0;
+  }
+
+  .sidebar-active {
+    display: flex;
+    position: fixed;
+    transform: translateX(0%);
+    transition: all ease-out 0.1s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  #sidebarList-items {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 15px;
+    height: 100vh;
+    width: 40%;
+    background-color: rgba(32, 32, 35);
+    z-index: 3;
+  }
+
+  .unvisible {
+    opacity: 0.3;
+  }
+
+  .empty {
+    width: 60%;
+  }
+}
+
+.popUp {
+  background: rgba(170, 180, 170, 0.4);
+  backdrop-filter: blur(3px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.showFlex {
+  display: flex;
+}
+
+.popBox {
+  border: solid #000 1px;
+  background: #fff;
+  width: 400px;
+  min-height: 580px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  h2,
+  h3 {
+    margin: 2px 0 0;
+    text-align: center;
+  }
+}
+
+.pokeLoad {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokeImgMain {
+  width: 200px;
+  margin: auto;
+}
+
+.pokeImg {
+  display: flex;
+
+  img {
+    width: 200px;
+    margin: auto;
+  }
+}
+
+.description {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.descEl {
+  display: flex;
+  flex-direction: column;
+}
+
+.attName {
+  font-weight: bold;
+}
+
+.rsvList {
+  padding: 0;
+  max-height: 90px;
+  max-width: 100%;
+  list-style: none;
+  overflow-y: auto;
+
+  li {
+    border-bottom: solid #eee 1px;
+  }
+}
+
+.reserve {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .input {
+    box-sizing: border-box;
+    padding: 5px;
+    margin-bottom: 8px;
+    width: 200px;
+    margin-right: auto;
+  }
+}
+
+.rsvBtn {
+  width: fit-content;
+  padding: 0 10px;
+  border: 2px solid rgb(49, 48, 48);
+  font-size: 18px;
+  font-weight: bold;
+  background: none;
+}
+
+.close {
+  position: relative;
+  margin-left: auto;
+
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.gg-close {
+  margin-left: auto;
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.gg-close::after,
+.gg-close::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: currentColor;
+  transform: rotate(45deg);
+  border-radius: 5px;
+  top: 13px;
+}
+
+.gg-close::after {
+  transform: rotate(-45deg);
+}
