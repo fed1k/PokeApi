@@ -17,7 +17,7 @@ For a live demo of the project [click here](https://fed1k.github.io/KanbanBoard/
 
 ## Presentation
 
-To see our presentation of the project [click here](https://).
+To see our presentation of the project [click here](https://drive.google.com/file/d/19eKvDP3jG-6t0dDRhX5hg-_UOrNM-7rt/view?usp=sharing).
 
 ## Prerequisites
 
