@@ -79,10 +79,6 @@ footer {
   display: none;
 }
 
-.pokeImg {
-  width: 100%;
-}
-
 @media (max-width: 760px) {
   .main {
     grid-template-columns: 40% 40%;
@@ -208,6 +204,7 @@ footer {
 
 .pokeImg {
   display: flex;
+
   img {
     width: 200px;
     margin: auto;
