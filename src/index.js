@@ -20,7 +20,7 @@ const getData = async () => {
       // }
       card.className = 'card';
       card.innerHTML = `
-      <img src="${json2.sprites.front_default}"></img>
+      <img class="pokeImg" src="${json2.sprites.front_default}"></img>
       <p>${json.results[i].name}<i class="far fa-heart"></i></p>
       <p class="likeCounts">likes ${0}</p>
   `;
