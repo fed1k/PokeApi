@@ -255,7 +255,9 @@ footer {
 }
 
 .rsvBtn {
-  width: 100px;
+  width: fit-content;
+  padding: 0 10px;
+  border: 2px solid rgb(49, 48, 48);
   font-size: 18px;
   font-weight: bold;
   background: none;
