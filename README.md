@@ -2,7 +2,7 @@
 
 # KanbanBoard
 
-> In this project, we practice everything we have learned in Webpack and APIs.
+> This web displays characters from the Pokemon universe through the [Pokeapi](https://pokeapi.co/) and allows to post likes, comments and reservations thanks to the [Involvement API](https://www.notion.so/microverse/Involvement-API-869e60b5ad104603aa6db59e08150270), which also allow the page to show a counter of these posts. The project was built using SCSS, JS, HTML and Webpack and tested through Jest.
 
 ## Built With
 
