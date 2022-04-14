@@ -13,7 +13,11 @@
 
 ## Live Demo
 
-For a live demo of the Portfolio [click here](https://fed1k.github.io/KanbanBoard/).
+For a live demo of the project [click here](https://fed1k.github.io/KanbanBoard/).
+
+## Presentation
+
+To see our presentation of the project [click here](https://).
 
 ## Prerequisites
 
