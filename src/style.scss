@@ -201,8 +201,17 @@ footer {
   align-items: center;
 }
 
-.pokeImg {
+.pokeImgMain {
   width: 200px;
+  margin: auto;
+}
+
+.pokeImg {
+  display: flex;
+  img {
+    width: 200px;
+    margin: auto;
+  }
 }
 
 .description {
