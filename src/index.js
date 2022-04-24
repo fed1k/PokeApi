@@ -76,11 +76,13 @@ const getData = async () => {
         postLike(json.results[i].name);
       });
       heartIcon.addEventListener('mousedown', () => {
-        heartIcon.style.transform = 'scale(.7)';
+        heartIcon.style.transform = 'scale(1.3)';
+        heartIcon.style.transition = 'transform 0.5s ease';
         heartIcon.classList.add('fas');
       });
       heartIcon.addEventListener('mouseup', () => {
         heartIcon.style.transform = 'scale(1)';
+        heartIcon.style.transition = 'all 0.5s ease';
         heartIcon.classList.remove('fas');
       });
       likesCount.innerHTML = `likes ${likes}`;
